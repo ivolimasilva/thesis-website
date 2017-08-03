@@ -9,6 +9,16 @@ export default new VueRouter({
             name: 'Home',
             path: '/',
             component: require('../views/Home.vue')
+        },
+        {
+            name: 'Progress',
+            path: '/progress',
+            component: require('../views/Progress.vue')
+        },
+        {
+            name: 'Privacy',
+            path: '/privacy',
+            component: require('../views/Privacy.vue')
         }
     ],
     mode: 'history',
