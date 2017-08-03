@@ -39,7 +39,7 @@ export default {
 }
 
 .application .theme--dark.toolbar--top {
-    background-color: rgba(11, 22, 59, 0.75);
+    background-color: rgba(25, 25, 50, 0.5);
     border-color: transparent !important;
 }
 

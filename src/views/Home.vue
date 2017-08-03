@@ -85,9 +85,6 @@ export default {
 .content {
     padding-left: 10%;
     padding-right: 10%;
-}
-
-.content {
     padding-bottom: 50px;
 }
 
