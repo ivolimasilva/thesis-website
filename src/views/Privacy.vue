@@ -6,11 +6,18 @@
             <v-parallax src="/public/banner.jpg" height="350">
                 <v-layout row align-vert-center align-horiz-center>
                     <v-flex class="text-xs-center" xs12>
-                        <h1 class="grey--text text--lighten-4 display-2">
-                            Hashtag recommendation and popularity
-                            <br> prediction for social network images
-                        </h1>
-                        <h2 class="grey--text text--lighten-4 display-1">Privacy Policy</h2>
+                        <div class="hidden-sm-and-down">
+                            <h1 class="grey--text text--lighten-4 display-2">
+                                Hashtag recommendation and popularity prediction for social network images
+                            </h1>
+                            <h2 class="grey--text text--lighten-4 display-1">Ivo Lima da Silva</h2>
+                        </div>
+                        <div class="hidden-sm-and-up">
+                            <h1 class="grey--text text--lighten-4 headline">
+                                Hashtag recommendation and popularity prediction for social network images
+                            </h1>
+                            <h2 class="grey--text text--lighten-4 title">Ivo Lima da Silva</h2>
+                        </div>
                     </v-flex>
                 </v-layout>
             </v-parallax>
