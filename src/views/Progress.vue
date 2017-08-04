@@ -24,60 +24,43 @@
         </section>
         <!-- Hero : End -->
     
-        <!-- Description : Start -->
+        <!-- Progress : Start -->
         <section class="content elevation-12">
-            <h2 class="display-2">Description</h2>
-            <div class="section-text body-1">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo. Cras at congue neque. Phasellus vel quam vitae mi imperdiet sodales non in eros. Integer sed lacus ornare urna rhoncus vestibulum. Proin porttitor magna eleifend arcu placerat laoreet.
-                </p>
-                <p>
-                    Phasellus elit sem, ultricies commodo nibh at, malesuada efficitur massa. Morbi scelerisque ligula vel nulla ullamcorper, ac lacinia libero placerat. Vestibulum vel quam at justo ultrices porta. Integer luctus et nibh sed suscipit. Proin ultrices quam ante, quis porta ex bibendum in. Aliquam erat volutpat. Vestibulum id tellus sed tellus facilisis venenatis. Duis at tortor eu velit consequat sodales. Donec feugiat euismod sagittis. Etiam in scelerisque nibh, in condimentum est.
-                </p>
-            </div>
-            <!-- Description : End -->
-    
-            <!-- Methodology : Start -->
-            <h2 class="display-2">Methodology</h2>
-            <div class="section-text body-1">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque.
-                </p>
-            </div>
-            <div class="stepper">
-                <v-stepper>
-                    <v-stepper-header>
-                        <v-stepper-step step="1" editable>Dataset collection</v-stepper-step>
-                        <v-divider></v-divider>
-                        <v-stepper-step step="2" editable>Development</v-stepper-step>
-                        <v-divider></v-divider>
-                        <v-stepper-step step="3" editable>Validation</v-stepper-step>
-                    </v-stepper-header>
-                    <v-stepper-content step="1">
-                        <div class="section-text body-1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo.
-                            </p>
-                        </div>
-                    </v-stepper-content>
-                    <v-stepper-content step="2">
-                        <div class="section-text body-1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo.
-                            </p>
-                        </div>
-                    </v-stepper-content>
-                    <v-stepper-content step="3">
-                        <div class="section-text body-1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo.
-                            </p>
-                        </div>
-                    </v-stepper-content>
-                </v-stepper>
-            </div>
+            <h2 class="display-2">Progress</h2>
+            <v-stepper class="elevation-2" vertical>
+                <v-stepper-step step="1" editable>
+                    Dataset collection
+                    <small>Creation of hashtag graph</small>
+                </v-stepper-step>
+                <v-stepper-content step="1">
+                    <v-card class="grey lighten-4 elevation-12" height="100px">
+                        <ul>
+                            <li>
+                                Obtaining access to Instagram API &emsp;
+                                <v-progress-circular indeterminate v-bind:size="15" v-bind:width="7" class="primary--text"></v-progress-circular>
+                            </li>
+                            <li>
+                                Perform a binary search using hashtags in a photo as new seeds &emsp;
+                                <v-progress-circular indeterminate v-bind:size="15" v-bind:width="7" class="primary--text"></v-progress-circular>
+                            </li>
+                            <li>
+                                Evaluate if the hashtag graph is enough spread to be considered a good set &emsp;
+                                <v-progress-circular indeterminate v-bind:size="15" v-bind:width="7" class="primary--text"></v-progress-circular>
+                            </li>
+                        </ul>
+                    </v-card>
+                </v-stepper-content>
+                <v-stepper-step step="2">
+                    Dataset collection
+                    <small>Gathering iamges for the classifier</small>
+                </v-stepper-step>
+                <v-stepper-content step="2">
+                    <v-card class="grey lighten-4 elevation-12" height="100px">
+                    </v-card>
+                </v-stepper-content>
+            </v-stepper>
         </section>
-        <!-- Methodology : End -->
+        <!-- Progress : End -->
     
     </div>
 </template>
@@ -92,7 +75,7 @@ export default {
 .content {
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 
 .content h2 {
@@ -101,5 +84,68 @@ export default {
 
 .section-text p {
     font-size: 24px;
+}
+
+.stepper {
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.stepper__wrapper {
+    height: auto;
+}
+
+.stepper__content {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.stepper--vertical .stepper__content {
+    margin: -8px 36px -16px 36px;
+}
+
+.application--light .stepper--vertical .stepper__content:not(:last-child) {
+    border: none;
+}
+
+.custom-loader {
+    animation: loader 1s infinite;
+    display: flex;
+}
+
+@-moz-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 </style>

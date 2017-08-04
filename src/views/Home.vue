@@ -30,42 +30,58 @@
             <h2 class="display-2">Description</h2>
             <div class="section-text body-1">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo. Cras at congue neque. Phasellus vel quam vitae mi imperdiet sodales non in eros. Integer sed lacus ornare urna rhoncus vestibulum. Proin porttitor magna eleifend arcu placerat laoreet.
+                    Currently, in social networks, labeling images with hashtags is used to make content reachable to more visualizations. The ones who do use this marketing method to promote their products, vary from big companies like worldwide brands or individuals, such as freelancers or photographers, since it usually involves low costs.
                 </p>
                 <p>
-                    Phasellus elit sem, ultricies commodo nibh at, malesuada efficitur massa. Morbi scelerisque ligula vel nulla ullamcorper, ac lacinia libero placerat. Vestibulum vel quam at justo ultrices porta. Integer luctus et nibh sed suscipit. Proin ultrices quam ante, quis porta ex bibendum in. Aliquam erat volutpat. Vestibulum id tellus sed tellus facilisis venenatis. Duis at tortor eu velit consequat sodales. Donec feugiat euismod sagittis. Etiam in scelerisque nibh, in condimentum est.
+                    However, a real time analysis of the ecosystem of what hashtags should be used and which are more popular is a complex task, whose eciency is hard to evaluate. This is because, literally any user can create an hashtag and trends change very often and, without some kind of automation, this task is impossible.
+                </p>
+                <p>
+                    The proposed solution consist on a tool that will use computer vision methods, more specifically image classification, to identify which of the saved hashtags can be applied to that image. With those identified hashtags, the specified tool will perform a data analysis and retrieve a popularity coecient for each hashtag. This information can be incredibly useful to support the decision of what hashtags to use. This project will focus on Instagram, since it is a social network that focus on visual static content which makes possible the image classification and has been more and more used within the described context of brand promoting and marketing. However, the result tool can work as a proof of concept and later be applied to other social networks.
+                </p>
+                <p>
+                    With this proposed tool it’s possible, for any type of user - businesses or individuals - to know what hashtags to use when publishing an image in a social network with the goal of obtaining more likes or visualizations than the same image with other or no hashtags.
+                </p>
+                <p>
+                    This project is part of my master thesis in the Master in Informatics and Computing Engineering of
+                    <a target="_blank" href="https://fe.up.pt">Faculdade de Engenharia da Universidade do Porto</a>.
                 </p>
             </div>
             <!-- Description : End -->
     
-            <!-- Methodology : Start -->
-            <h2 class="display-2">Methodology</h2>
+            <!-- Solution : Start -->
+            <h2 class="display-2">Solution</h2>
             <div class="section-text body-1">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque.
+                    The proposed solution to solve the identified problem consists in two aspects:
                 </p>
             </div>
             <div class="stepper">
                 <v-stepper>
                     <v-stepper-header>
-                        <v-stepper-step step="1" editable>Dataset collection</v-stepper-step>
+                        <v-stepper-step step="1" editable>Image classification</v-stepper-step>
                         <v-divider></v-divider>
-                        <v-stepper-step step="2" editable>Development</v-stepper-step>
-                        <v-divider></v-divider>
-                        <v-stepper-step step="3" editable>Validation</v-stepper-step>
+                        <v-stepper-step step="2" editable>Popularity Analysis</v-stepper-step>
                     </v-stepper-header>
                     <v-stepper-content step="1">
                         <div class="section-text body-1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo.
-                            </p>
+                            <h1 class="display-1">Image classification</h1>
+                            <ul>
+                                <li class="headline">Create a graph-based model of hashtags with a maximum degree for each node;</li>
+                                <li class="headline">For each saved hashtag, save a collection of images to train the classifier;</li>
+                                <li class="headline">For each saved image, perform a popularity analysis;</li>
+                            </ul>
                         </div>
                     </v-stepper-content>
                     <v-stepper-content step="2">
                         <div class="section-text body-1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum malesuada blandit. Ut varius placerat scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec luctus, sem vitae imperdiet ultrices, dui arcu convallis mi, non egestas massa nisl eu magna. Nunc fringilla, augue volutpat pellentesque ornare, est eros lacinia nibh, a euismod diam urna non justo.
-                            </p>
+                            <h1 class="display-1">Popularity Analysis</h1>
+                            <ul>
+                                <li class="headline">Retrieve image’s author history;</li>
+                                <li class="headline">Calculate user’s trend curve;</li>
+                                <li class="headline">When the image’s life span ends, check the number of likes;</li>
+                                <li class="headline">Register a new popularity index, based on the number of likes, after the image’s life span, and its relation with the trend curve;</li>
+                                <li class="headline">Predict the next value of an hashtag’s popularity index based on past indexes;</li>
+                            </ul>
                         </div>
                     </v-stepper-content>
                     <v-stepper-content step="3">
@@ -78,7 +94,7 @@
                 </v-stepper>
             </div>
         </section>
-        <!-- Methodology : End -->
+        <!-- Solution : End -->
     
     </div>
 </template>
@@ -93,7 +109,7 @@ export default {
 .content {
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 
 .content h2 {
