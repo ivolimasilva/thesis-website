@@ -28,12 +28,12 @@
         <section class="content elevation-12">
             <h2 class="display-2">Progress</h2>
             <v-stepper class="elevation-2" vertical>
-                <v-stepper-step step="1" editable>
+                <v-stepper-step step="1">
                     Dataset collection
                     <small>Creation of hashtag graph</small>
                 </v-stepper-step>
                 <v-stepper-content step="1">
-                    <v-card class="grey lighten-4 elevation-12" height="100px">
+                    <v-card class="grey lighten-4">
                         <ul>
                             <li>
                                 Obtaining access to Instagram API &emsp;
@@ -75,7 +75,8 @@ export default {
 .content {
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    min-height: calc(100vh - 350px);
 }
 
 .content h2 {
@@ -95,6 +96,12 @@ export default {
     height: auto;
 }
 
+@media screen and (max-width: 480px) {
+    .stepper__wrapper {
+        height: 150px;
+    }
+}
+
 .stepper__content {
     background-color: #F5F5F5;
     border-radius: 5px;
@@ -106,6 +113,10 @@ export default {
 
 .application--light .stepper--vertical .stepper__content:not(:last-child) {
     border: none;
+}
+
+.card {
+    box-shadow: none;
 }
 
 .custom-loader {

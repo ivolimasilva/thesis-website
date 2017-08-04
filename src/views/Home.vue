@@ -109,7 +109,8 @@ export default {
 .content {
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    min-height: calc(100vh - 350px);
 }
 
 .content h2 {
