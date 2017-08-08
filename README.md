@@ -1,18 +1,5 @@
-# thesis-website
+# Hashtag recommendation and popularity prediction for social network images
 
-> A Vue.js project
+> This is the website for my master thesis in the Master in Informatics and Computing Engineering of [Faculdade de Engenharia da Universidade do Porto](http://fe.up.pt).
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Online version available [here](https://thesis.ivolimasilva.xyz/).
