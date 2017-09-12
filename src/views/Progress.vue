@@ -1,6 +1,6 @@
 <template>
     <div id="progress">
-    
+
         <!-- Hero : Start -->
         <section class="elevation-12" id="hero">
             <v-parallax src="/public/banner.jpg" height="350">
@@ -23,7 +23,7 @@
             </v-parallax>
         </section>
         <!-- Hero : End -->
-    
+
         <!-- Progress : Start -->
         <section class="content elevation-12">
             <h2 class="display-2">Progress</h2>
@@ -36,8 +36,7 @@
                     <v-card class="grey lighten-4">
                         <ul>
                             <li>
-                                Obtaining access to Instagram API &emsp;
-                                <v-progress-circular indeterminate v-bind:size="15" v-bind:width="7" class="primary--text"></v-progress-circular>
+                                Obtaining access to Instagram API <span class="primary--text">✔</span>
                             </li>
                             <li>
                                 Perform a binary search using hashtags in a photo as new seeds &emsp;
@@ -61,7 +60,7 @@
             </v-stepper>
         </section>
         <!-- Progress : End -->
-    
+
     </div>
 </template>
 
